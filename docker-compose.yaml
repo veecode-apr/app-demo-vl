@@ -1,0 +1,9 @@
+version: '3.8'
+services:
+  app-demo-vl:
+    container_name: app-demo-vl 
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"

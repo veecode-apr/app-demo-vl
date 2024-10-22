@@ -1,0 +1,19 @@
+name: app-demo-vl
+build:
+  app-demo-vl:
+    image: okteto.dev/java-gradle-app-demo-vl:1.0.0
+    dockerfile: Dockerfile.okteto
+    context: .
+deploy:
+  - kubectl apply -f okteto-k8s.yaml
+dev:
+  app-demo-vl:
+    image: veecode/okteto-runtime:java17
+    command: ./gradlew build --continuous --quiet & 2>1 >/dev/null && ./gradlew bootRun
+    sync:
+      - .:/usr/src/app
+    forward:
+      - 8080:8080
+      - 5005:5005
+    volumes:
+      - /home/gradle/.gradle

@@ -1,0 +1,8 @@
+site_name: "app-demo-vl"
+site_description: "app-demo-vl"
+
+nav:
+  - Introduction: index.md
+
+plugins:
+  - techdocs-core
