@@ -1,0 +1,35 @@
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: app-demo-vl
+  title: app-demo-vl
+  publishedAt: "2024-10-22 19:59:15"
+  description: 'app-demo-vl Swagger at [http://swagger.io](http://swagger.io) or on [irc.freenode.net, #swagger](http://swagger.io/irc/).  For this sample, you can use the api key `special-key` to test the authorization filters.'
+  tags:
+    - demo-vl
+spec:
+  type: openapi
+  lifecycle: production
+  owner: consumer
+  definition: |-
+    openapi: 3.0.0
+    info:
+        description: 'app-demo-vl Swagger at [http://swagger.io](http://swagger.io) or on [irc.freenode.net, #swagger](http://swagger.io/irc/).  For this sample, you can use the api key `special-key` to test the authorization filters.'
+        version: 1.0.2
+        title: app-demo-vl
+        termsOfService: http://swagger.io/terms/
+        contact:
+            email: apiteam@swagger.io
+        license:
+            name: Apache 2.0
+            url: http://www.apache.org/licenses/LICENSE-2.0.html
+    servers:
+        - url: https://rest.apr.vee.codes/app-demo-vl
+    tags:
+        - name: spec
+          description: Health
+          externalDocs:
+            description: Find out more
+            url: http://swagger.io
+    paths: {}
+    components: {}
